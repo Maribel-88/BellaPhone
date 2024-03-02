@@ -4,8 +4,16 @@
     box-sizing: border-box;
 }
 
+/* -------------------------------Navigation----------------------------------*/
 nav {
     background-color: rgb(90, 140, 10);
+}
+
+.btnNav:hover {
+    border-radius: 15px;
+    border: solid 1px transparent;
+    background: linear-gradient(to bottom right, #406c03, yellow);
+    height: 38px;
 }
 
 #callout {
@@ -19,6 +27,7 @@ img {
     height:400px;
 }
 
+/* -------------------------------Footer----------------------------------*/
 #contactInfo {
     background-color: rgb(90, 140, 10);
 }
