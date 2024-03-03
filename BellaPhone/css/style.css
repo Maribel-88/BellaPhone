@@ -3,10 +3,63 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    font-family: sans-serif;
+    
+
+}
+
+i {
+    cursor: pointer;
+}
+
 
 /* -------------------------------Navigation----------------------------------*/
-nav {
+
+
+#navCon {
     background-color: rgb(90, 140, 10);
+}
+
+#navCon div {
+    padding: 10px 0;
+    
+}
+
+#navCon div a,
+#navPhone {
+    color:#f4f4f4;
+}
+
+#navCon div a:hover,
+#navPhone:hover {
+   color: rgb(220, 244, 9);
+}
+
+#navButtons a {
+    color:#000;
+    row-gap: 20px;
+}
+
+#navButtons a:hover {
+    color:rgb(9, 100, 9);
+    border-radius: 15px;
+    border: solid 1px transparent;
+    background: linear-gradient(to bottom right, #406c03, yellow);
+    height: 38px;
+}
+.navbar { 
+    background-color: #8c240a;
+    background: linear-gradient(to bottom right, #406c03, yellow);
+    padding: 25px 60px;
+    color: #fff;
+}
+
+#callInfo {
+    padding-top: 20px;
+    text-align: center;  
+    flex-direction: column; 
+    display:inline-block;
 }
 
 .btnNav:hover {
@@ -14,6 +67,7 @@ nav {
     border: solid 1px transparent;
     background: linear-gradient(to bottom right, #406c03, yellow);
     height: 38px;
+   
 }
 
 #callout {
@@ -25,6 +79,58 @@ nav {
 img {
     width: 300px;
     height:400px;
+}
+
+/* Shop items styles are here */
+
+#shop {
+    display:flex;
+    flex-direction: row;
+    row-gap: 30px;
+    margin-bottom: 20px;
+}
+
+
+
+
+@media (max-width: 1000px) {
+    .shop {
+        grid-template-columns: repeat(2, 254px);
+    }
+}
+
+@media (max-width: 500px) {
+    .shop {
+        grid-template-columns: repeat(1, 254px);
+    }
+}
+
+.price-quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    margin-left: 50px;
+}
+
+.btn-group {
+   
+    display: flex;
+    gap: 2px;
+    font-size: 16px;
+    width: 10px;
+    margin-left: 80px;
+
+  
+}
+
+.bi-dash-lg { 
+    color:#f77f00;
+}
+
+.bi-plus-lg {
+    color:rgb(9, 59, 2);
 }
 
 /* -------------------------------Footer----------------------------------*/
@@ -41,7 +147,7 @@ img {
 #footer {
     
     background-color: rgb(90, 140, 10); 
-  
+    font-weight: 550;
    
     
 }
