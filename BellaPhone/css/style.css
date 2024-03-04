@@ -133,6 +133,74 @@ img {
     color:rgb(9, 59, 2);
 }
 
+/* -------------------------------Cart Table----------------------------------*/
+
+#shoppingTableCart {
+   
+    background-color: #f4f4f4;
+    border-color: #ccc;
+}
+
+@media (max-width: 500px) {
+    .shop {
+        grid-template-columns: repeat(1, 254px);
+    }
+}
+
+
+.table-heading {
+    display: inline-block;
+    
+}
+
+#table-row,
+#product-details
+ {
+    
+    width:inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+#myOrder {
+    background-color: #ccc;
+    height:300px;
+    border-radius: 10px;
+
+}
+
+#subtotalOrder {
+    display: flex;
+    flex-direction: column;
+}
+
+#subTotalrow,
+#discount-row,
+#postage-row,
+#totalOrder-row
+ {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+}
+
+#cartButton {
+    background-color: rgb(90, 140, 10);
+    color: #fff;
+    border-radius: 10px;
+    padding:8px;
+    justify-content: center;
+    display: block;
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+
+
+
 /* -------------------------------Footer----------------------------------*/
 #contactInfo {
     background-color: rgb(90, 140, 10);
