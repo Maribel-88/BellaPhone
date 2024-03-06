@@ -1,15 +1,15 @@
 
 let shop = document.getElementById('shop');
 
-let basket = JSON.parse(localStorage.getItem("data")) || [];
+let basket = [];
 
 let generateShop = () => {
     return (shop.innerHTML = shopItemsData.map((x)=>{
         let { id,name,price,desc,img,pge } = x;
         let search = basket.find((x) => x.id === id) || [];
         return `
-                    <div class="col-md-6 col-lg-3 col-sm-12 item" id=product-id-${id}>
-                        <div class="card bg-light mb-5" style="height:650px";>
+                    <div class="col-md-6 col-lg-3 col-sm-12 item" >
+                        <div class="card bg-light mb-5" style="height:650px" id=product-id-${id};>
                                 <div class="card-body text-start">
                                     <p class="card-text">Apple</p>
                                     <h3 class="card-title mb-3" id="phoneName">${name}</h3>
@@ -20,9 +20,9 @@ let generateShop = () => {
                                 <div class="price-quantity">
                                         <div id="price"><h2>£${price}</h2></div>
                                         <div class="btn-group btn-group-sm " role="group" aria-label="Basic example">
-                                            <button onclick="decrement(${id})" type="button" class="btn btn-light bi bi-dash-lg"></button>
-                                            <button id=${id} type="button" class="btn btn-light quantity">${search.item === undefined ? 0 : search.item}</button>
-                                            <button onclick="increment(${id})" type="button" class="btn btn-light bi bi-plus-lg"></button>
+                                            <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
+                                            <div id=${id}  class="btn btn-light quantity">0</div>
+                                            <i onclick="increment(${id})" class=" bi bi-plus-lg"></i>
                                         </div>
                                 </div>  
                         </div>
@@ -34,7 +34,7 @@ let generateShop = () => {
 };
 
 generateShop();
-
+console.log(shop);
 
  
 let increment = (id) => {
@@ -89,4 +89,5 @@ let calculation =()=>{
 };
 
 calculation();
+
 
