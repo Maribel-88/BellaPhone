@@ -78,73 +78,67 @@
         </header>
         
        
-          
-      <div class="container pt-5">
-        <h3>Your Shopping Cart</h3>
-      </div>
+        <div>
+          <div class="container pt-5">
+            <h3>Your Shopping Cart</h3>
+          </div>
+
          <div class="container" id="shoppingTableCart">
-          <div class="row">
-          <div class="col-md-8" id="table-cart">
-            <div class="container" id="tableCart">
-                <div class="container table-heading">
-                    <div class="pt-3" id="table-row">
-                        <div class="col-md-6" >
-                            <span>Item</span>
+            <div class="row">
+                <div class="col-md-8 p-5" id="table-cart">
+                      <div class="text-start" id="checkProdHeader-container">
+
+                        <div class="text-center row container-fluid " id="checkProdHeader">
+                          <div class="col-5" id="productCol">Product(s)</div>
+                          <div class="col-3 " id="priceCol">Price</div>
+                          <div class="col-2" id="qtyCol">Qty</div>
                         </div>
-                        <div class="col-md-4" >
-                            <span>Price</span>
+                        <hr>
+                        <div class="row container-fluid" id="productDetails">
                         </div>
-                        <div class="col-md-2">
-                            <span>Qty</span>
-                        </div> 
-                    </div>
-                    <hr>
-                </div>
-                <div>
-                <div class="row" id="product-details">
-                    
+
+                      </div>
+                      
+                </div>          
+                 
+                <div class="col-md-4 pt-3" id="myOrder">
+                  <div>My Order</div>
+                  <hr>
+                  <div class="container" id="subtotalOrder">
+                  <div id="subTotalrow">
+                      <div class="col-md-6" id="subTotalrow1">Subtotal</div>
+                      <div class="col-md-4">£</div>
+                  </div>
+
+                  <div id="discount-row">
+                      <div class="col-md-6">Discount</div>
+                      <div class="col-md-4">£</div>
+                  </div>
+
+                  <div id="postage-row">
+                      <div class="col-md-8">Postage & Packing:</div>
+                      <div class="col-md-4">£</div>
+                  </div><br>
                   
-                </div > 
-                </div>
-            </div>
-            
-               
-                  
-          </div>
+                  <div id="totalOrder-row">
+                      <div class="col-md-8">Order Total</div>
+                      <div class="col-md-4">£</div>
+                      </div>
+                  </div><br><br>
 
-          <div class="col-md-4" id="myOrder">
-            <div>My Order</div>
-            <hr>
-            <div class="container" id="subtotalOrder">
-            <div id="subTotalrow">
-                <div class="col-md-6">Subtotal</div>
-                <div class="col-md-4">£</div>
+                  <div>
+                      <button id="cartButton">PROCEED TO CHECKOUT</button>
+                  </div>
+                </div>   
             </div>
+         </div><br><br>
+        </div> 
 
-            <div id="discount-row">
-                <div class="col-md-6">Discount</div>
-                <div class="col-md-4">£</div>
-            </div>
-
-            <div id="postage-row">
-                <div class="col-md-8">Postage & Packing:</div>
-                <div class="col-md-4">£</div>
-            </div><br>
-            
-            <div id="totalOrder-row">
-                <div class="col-md-8">Order Total</div>
-                <div class="col-md-4">£</div>
-                </div>
-            </div><br><br>
-
-            <div>
-                <button id="cartButton">PROCEED TO CHECKOUT</button>
-            </div>
-           </div>
-             
-          </div>
-        </div>
-    </div>
+        <div>
+          <div class="container p-5 justify content center">
+             <div class="shoppingEmpty" id="shoppingEmpty"></div>
+          </div><br><br>
+         </div>
 
         <footer>
             <div id="footer" class="text-center fixed-bottom text-light">    

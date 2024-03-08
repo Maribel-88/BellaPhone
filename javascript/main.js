@@ -1,7 +1,7 @@
 
 let shop = document.getElementById('shop');
 
-let basket = [];
+let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let generateShop = () => {
     return (shop.innerHTML = shopItemsData.map((x)=>{
@@ -10,20 +10,23 @@ let generateShop = () => {
         return `
                     <div class="col-md-6 col-lg-3 col-sm-12 item" >
                         <div class="card bg-light mb-5" style="height:650px" id=product-id-${id};>
-                                <div class="card-body text-start">
+                                <div class="card-body text-center">
                                     <p class="card-text">Apple</p>
                                     <h3 class="card-title mb-3" id="phoneName">${name}</h3>
                                     <a href="${pge}"><img class="img-fluid"src=${img}  alt="" id="imagePhone"><br><br></a>
                                     <p class="card-text text-center"> ${desc}</p>
                                     
                                 </div>
-                                <div class="price-quantity">
-                                        <div id="price"><h2>£${price}</h2></div>
-                                        <div class="btn-group btn-group-sm " role="group" aria-label="Basic example">
-                                            <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
-                                            <div id=${id}  class="btn btn-light quantity">0</div>
-                                            <i onclick="increment(${id})" class=" bi bi-plus-lg"></i>
-                                        </div>
+                                <div class="price-quantity text-center">
+                                        <div class="row">
+                                            <div class="col" id="price"><h2>£${price}</h2></div>
+                                            <div class="col btn-group btn-group-sm " role="group" aria-label="Basic example">
+                                                <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
+                                                <div id=${id}  class="btn btn-light quantity">0</div>
+                                                <i onclick="increment(${id})" class=" bi bi-plus-lg"></i>
+                                            </div>
+                                        </div>   
+                                       
                                 </div>  
                         </div>
                     </div>

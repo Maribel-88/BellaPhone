@@ -1,5 +1,6 @@
 let ShoppingCart = document.getElementById("product-details");
-
+let EmptyLabel = document.getElementById("shoppingEmpty")
+let EmptyCart = document.getElementById("shoppingTableCart")
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let calculation =()=>{
@@ -12,37 +13,34 @@ let calculation =()=>{
   
    let generateCartItems = () => {
     if(basket.length !==0){
-       return (ShoppingCart.innerHTML = basket.map((x) => 
+       return (productDetails.innerHTML = basket.map((x) => 
        {
         let { id, item } = x;
         let search = shopItemsData.find((y)=>y.id === id) || [];
-        let {img, name, price}= search;
+        let {img,desc, price}= search;
         return`  
-
-                <div class="row" id="product-details">
-                    <div class="col-md-6"><img class="img-fluid" width="120" height="150" src=${img} alt="" /></div>
-                    <div class="col-md-4">£ ${price}</div>
-                    <div class="col-md-2">
-                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                        <button onclick="decrement(${id})" type="button" class="btn btn-light bi bi-dash-lg"></button>
-                        <button id=${id} type="button" class="btn btn-light quantity">${item}</button>
-                        <button onclick="increment(${id})" type="button" class="btn btn-light bi bi-plus-lg"></button>
-                         </div>
-                    </div> 
-                </div>
-          
-               
-                  
-         
-
-          
+                      
+                          <div class="col-6 mb-5 "  >
+                               <h6>${desc}</h6>
+                               <div><img  src=${img} alt="" id="imgCart"/></div>
+                          </div>
+                          <div class="col-2">
+                                <div>${price}.00</div>
+                          </div>
+                          <div class="col-2 container-fluid">
+                          <div class="btn-group btn-group-sm col-2" role="group" aria-label="Basic example">
+                                <button onclick="decrement(${id})" type="button" class="btn btn-light bi bi-dash-lg"></button>
+                                <button id=${id} type="button" class="btn btn-light quantity">${item}</button>
+                                <button onclick="increment(${id})" type="button" class="btn btn-light bi bi-plus-lg"></button>
+                          </div><br><br>
+                          </div> 
         `;
        })
        .join(""));
     }
     else{
-        ShoppingCart.innerHTML = ``;
-        label.innerHTML = `
+      EmptyCart.innerHTML = ``;
+      EmptyLabel.innerHTML = `
         <h2>Cart is Empty</h2>
         <a href="welcome.html">
          <button class="HomeBtn">Back to home</button>
