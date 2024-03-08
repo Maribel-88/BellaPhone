@@ -1,6 +1,8 @@
 let ShoppingCart = document.getElementById("product-details");
-let EmptyLabel = document.getElementById("shoppingEmpty")
-let EmptyCart = document.getElementById("shoppingTableCart")
+let EmptyLabel = document.getElementById("shoppingEmpty");
+let EmptyCart = document.getElementById("shoppingTableCart");
+let subTotal = document.getElementById("subTotalrow");
+let discount = document.getElementById("discount-row");
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let calculation =()=>{
@@ -28,12 +30,15 @@ let calculation =()=>{
                                 <div>${price}.00</div>
                           </div>
                           <div class="col-2 container-fluid">
-                          <div class="btn-group btn-group-sm col-2" role="group" aria-label="Basic example">
-                                <button onclick="decrement(${id})" type="button" class="btn btn-light bi bi-dash-lg"></button>
-                                <button id=${id} type="button" class="btn btn-light quantity">${item}</button>
-                                <button onclick="increment(${id})" type="button" class="btn btn-light bi bi-plus-lg"></button>
-                          </div><br><br>
+                              <div class="btn-group btn-group-sm col-2" role="group" aria-label="Basic example">
+                                    <button onclick="decrement(${id})" type="button" class="btn btn-light bi bi-dash-lg"></button>
+                                    <button id=${id} type="button" class="btn btn-light quantity">${item}</button>
+                                    <button onclick="increment(${id})" type="button" class="btn btn-light bi bi-plus-lg"></button>
+                              </div>
+                              <div><button onclick="removeItem(${id})">Delete</button></div>
+
                           </div> 
+                          <hr>
         `;
        })
        .join(""));
@@ -42,7 +47,7 @@ let calculation =()=>{
       EmptyCart.innerHTML = ``;
       EmptyLabel.innerHTML = `
         <h2>Cart is Empty</h2>
-        <a href="welcome.html">
+        <a href="index.html">
          <button class="HomeBtn">Back to home</button>
         </a>
         `;
@@ -124,13 +129,25 @@ let TotalAmount = () => {
         return item * search.price;
     }).reduce((x,y)=>x+y, 0);
     // console.log(amount);
-    label.innerHTML = `
-    <h2>Grand Total : £ ${amount}</h2>
-    <button onclick="checkout()" class="checkout"><a href="checkout.html">Checkout</a></button>
-    <button onclick="clearCart()"class="removeAll">Clear Cart</button>
+    subTotal.innerHTML = `
+               
+                      <div class="col-md-6" id="subTotalrow1">Subtotal</div>
+                      <div class="col-md-4">£ ${amount}.00</div>
+                 
     `;
+    discount.innerHTML =`
+                      <div class="col-md-6">Discount</div>
+                      <div class="col-md-4">- £ 15.00</div>
+
+    `
    
     } else return;
 };
 
 TotalAmount();
+
+let orderTotal = () => {
+  let num1 = document.getElementById("subTotalrow2");
+  console.log(num1);
+};
+orderTotal();

@@ -22,7 +22,7 @@ let generateShop = () => {
                                             <div class="col" id="price"><h2>£${price}</h2></div>
                                             <div class="col btn-group btn-group-sm " role="group" aria-label="Basic example">
                                                 <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
-                                                <div id=${id}  class="btn btn-light quantity">0</div>
+                                                <div id=${id}  class="btn btn-light quantity">${search.item === undefined ? 0 : search.item}</div>
                                                 <i onclick="increment(${id})" class=" bi bi-plus-lg"></i>
                                             </div>
                                         </div>   
