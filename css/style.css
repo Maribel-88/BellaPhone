@@ -13,6 +13,11 @@ i {
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+    color:#fff 
+}
+
 
 /* -------------------------------Navigation----------------------------------*/
 
@@ -233,6 +238,13 @@ img {
     flex-direction: row;
     justify-content: space-between;
    
+}
+
+#amountTotal,
+#discount15,
+#shippingFee,
+#totalPrice {
+    justify-content: right;
 }
 
 #cartButton {

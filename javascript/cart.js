@@ -2,7 +2,12 @@ let ShoppingCart = document.getElementById("product-details");
 let EmptyLabel = document.getElementById("shoppingEmpty");
 let EmptyCart = document.getElementById("shoppingTableCart");
 let subTotal = document.getElementById("subTotalrow");
+let subTotal1 = document.getElementById("amountTotal");
 let discount = document.getElementById("discount-row");
+let discountPrice = document.getElementById("discount15");
+let shippingCost = document.getElementById("shippingFee");
+let postage = document.getElementById("postage-row");
+let orderTotal = document.getElementById("totalPrice");
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let calculation =()=>{
@@ -122,7 +127,8 @@ let clearCart = ()=>{
 
 let TotalAmount = () => {
     if(basket.length !==0)
-    {
+    { 
+        
         let amount = basket.map((x) =>{
         let { item, id} = x;
         let search = shopItemsData.find((y)=> y.id === id) || [];
@@ -132,22 +138,26 @@ let TotalAmount = () => {
     subTotal.innerHTML = `
                
                       <div class="col-md-6" id="subTotalrow1">Subtotal</div>
-                      <div class="col-md-4">£ ${amount}.00</div>
+                      <div class="col-md-4" id="amountTotal">£ ${amount}.00</div>
                  
     `;
     discount.innerHTML =`
                       <div class="col-md-6">Discount</div>
-                      <div class="col-md-4">- £ 15.00</div>
+                      <div class="col-md-4" id="discount15">- £ 15.00</div>
 
+    `;
+    postage.innerHTML = `
+                      <div class="col-md-8">Postage & Packing:</div>
+                      <div class="col-md-4" id="shippingFee"> £ 5.00</div>
+    `;
+
+    subTotal = amount - 10 ;
+    orderTotal.innerHTML = `
+    <div class="col-md-4" id="totalPrice">£${subTotal}.00</div>
     `
-   
     } else return;
 };
 
 TotalAmount();
 
-let orderTotal = () => {
-  let num1 = document.getElementById("subTotalrow2");
-  console.log(num1);
-};
-orderTotal();
+

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/style.css">
+    <title>BellaPhone</title>
+
+</head>
+<body>
+    <header>
+        <div class="container-fluid" id="navCon">
+          <div class="row">
+              <div class="col d-flex justify-content-center"><a href="index.html" class="navbar-brand " id="logo"><h1>Bella Phone</h1></a></div>
+              <div class="col d-flex justify-content-center" id="callInfo">
+                      <a href="#" ><i class="fa fa-phone"></i>+447535719467</a>
+                      <a href="#"><i class="fa fa-envelope"></i>maribellepajares2012@gmail.com</a>  
+              </div>
+         </div>
+       </div>
+       <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+        <div class="container-fluid" id="navButtons">
+          <a class="navbar-brand" href="welcome.html">Home</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="deals.html" class="nav-link  btnNav">
+                    Deals
+                  </a>
+              </li>
+              <li class="nav-item">
+                <a href="about.html" class="nav-link  btnNav">
+                    About
+                 </a>
+              </li>
+              <li class="nav-item">
+                <a href="trade-in.html" class="nav-link btnNav" id="modal">
+                    Trade-in
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btnNav" href="trackOrder.html">Order Status</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="container-fluid d-flex justify-content-end">
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+        <div id="cartPadding" class="col d-flex justify-content-end">
+          <a href="cart.html" >
+            <div class="cart ">
+              <i class="bi bi-cart2"></i>
+              <div id="cartAmount" class="cartAmount">0</div>
+            </div>
+          </a>
+        </div>
+      </nav>
+    </header>
+        
+  
+   
+  <div class="container" id="paymentDiv">
+    <div class="row container-fluid">
+      <div class="text-center" id="checkoutLabel">
+       Checkout
+       <span id="checkoutLabelItem"></span>
+       </div>
+      <hr class="my-2 mb-0"> <br>
+      <div class="container bg-light col-md-8" id="billingDiv">   
+        <h4 class="mb-3">Billing Address</h4>
+            <form novalidate>
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input id="firstName" type="text" class="form-control" placeholder="First Name" required>
+                        <div class="invalid-feedback">
+                            Valid first name is required.
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input id="lastName" type="text" class="form-control" placeholder="Last Name" required>
+                        <div class="invalid-feedback">
+                            Valid last name is required.
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label for="username" class="form-label">Username</label>
+                        <div class="input-group">
+                            <span class="input-group-text">@</span>
+                            <input id="username" type="text" class="form-control" placeholder="Username" required> 
+                        </div>
+                        <div class="invalid-feedback">
+                            Valid username is required.
+                        </div> 
+                    </div>
+                    <div class="col-md-5">
+                        <label for="country" class="form-label">Country</label>
+                            <select id="country" class="form-control" > 
+                                <option value="">Choose...</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="Philippines">Philippines</option>
+                            </select>
+                        <div class="invalid-feedback">
+                            Valid username is required.
+                        </div> 
+                    </div>
+                    <div class="col-md-4">
+                        <label for="county" class="form-label">County</label>
+                            <select id="county" class="form-control" > 
+                                <option value="">Choose...</option>
+                                <option value="London">London</option>
+                                <option value="Cambridgeshire">Cambridgeshire</option>
+                                <option value="Linconshire">Linconshire</option>
+                            </select>
+                        <div class="invalid-feedback">
+                            Valid username is required.
+                        </div> 
+                    </div>
+                    <div class="col-md-3">
+                        <label for="postCode" class="form-label">Postcode</label>
+                        <div class="input-group">
+                            <span class="input-group-text">@</span>
+                            <input id="postCode" type="text" class="form-control" placeholder="Postcode" required> 
+                        </div>
+                        <div class="invalid-feedback">
+                            Valid username is required.
+                        </div> 
+                    </div>
+
+                    <hr class="my-4">
+                    
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input id="sameAdd" type="checkbox" class="form-check-input">
+                            <label class="form-check-label" for="sameAdd">Shipping address is the same as billing address.</label>
+                        </div>
+                        <div class="form-check">
+                            <input id="saveInfo" type="checkbox" class="form-check-input">
+                            <label class="form-check-label" for="saveInfo">Save this info.</label>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <h4 class="mb-3">Payments</h4>
+
+                    <div class="form-check">
+                        <input id="creditCard" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                        <label for="creditCard">Credit Card</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input id="debitCard" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                        <label for="debitCard">Debit Card</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input id="payPal" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                        <label for="payPal">PayPal</label>
+                    </div>
+
+                    <div class="row my-3 gy-3">
+                        <div class="col-md-6">
+                          <label for="fullName" class="form-label">Name on Card</label>
+                          <input id="fullName" type="text" class="form-control"> 
+                          <small class="text-muted">Full name as displayed on card.</small>
+                          <div class="invalid-feedback">
+                            Name on card is required.
+                          </div>     
+                        </div>
+                        <div class="col-md-6">
+                          <label for="cc-number" class="form-label">Credit Card Number</label>
+                          <input id="cc-number" type="text" class="form-control"> 
+                          <div class="invalid-feedback">
+                            Credit Card number is required.
+                          </div> 
+                        </div>
+                        <div class="col-md-3">
+                            <label for="expireDate" class="form-label">Expiration Date</label>
+                            <input id="expireDate" type="text" class="form-control"> 
+                            <div class="invalid-feedback">
+                                Expiration Date is required.
+                            </div> 
+                        </div>
+                        <div class="col-md-3">
+                            <label for="cc-cvv" class="form-label">CVV</label>
+                            <input id="cc-cvv" type="text" class="form-control"> 
+                            <div class="invalid-feedback">
+                                CVV is required.
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                
+            </form>
+            
+      </div>
+      <div class="container bg-light col-md-4" id="totalAmountDiv" >
+          <div id="checkOutAmount" >Total Amount
+            <span id="checkItems">()</span>
+          </div>
+          <small id="subCheckout"></small>
+          <hr>
+          <div class="text-start" id="checkProdHeader-container">
+
+            <div class=" row container-fluid" id="checkProdHeader">
+              <div class="col-6 " id="productCol">Product(s)</div>
+              <div class="col-2 " id="priceCol">Price</div>
+              <div class="col-2" id="qtyCol">Qty</div>
+              <div class="col-2" id="subtotalCol">Subtotal</div>
+            </div>
+
+            <div class="container-fluid" id="checkoutDiv">
+                
+            </div>
+          </div>
+      </div>
+
+        <hr class="my-4">
+        <button id="checkoutBtn" class="mb-5">Buy Now</button> <br>
+    </div>
+  </div>  
+      
+  
+
+
+
+
+  
+
+   <!--Contact & footer-->
+   <section class="p-5" id="contactInfo">
+    <div class="container">
+        <div class="row g-4">
+
+            <div class="col-md-4 text-light">
+                <h3 class=" mb-4">Customer Services</h3>
+                <div id="customerServices">
+                    <p>
+                        <a href="refund.html"><span class="fw-bold">Refund Policy</span></a> 
+                    </p>
+                    <p>
+                       <a href="terms.html"><span class="fw-bold">Terms</span></a>
+                    </p>
+                    <p>
+                       <a href="trackOrder.html"> <span class="fw-bold">Track My Order</span></a>
+                    <p>    
+                </div>
+            </div>
+            <div class="col-md-4 text-light" id="footerInfo">
+                <h3 class=" mb-4 ">Contact Info</h3>
+                <div >
+                    <p>
+                        <span class="fw-bold">Location:</span> 21 Fenscape, Whittlesey Peterborough 
+                         PE7 1GS       
+                    </p>
+                    <p>
+                        <a href="#"><span class="fw-bold">Phone no: </span><i class="fa fa-phone"></i> +447535719467</a>
+                    </p>
+                    <p>
+                        <a href="#"><span class="fw-bold">Email:</span> maribellepajares2012@gmail.com</a>
+                    <p>
+                    <p>
+                        <span class="fw-bold">Agent Name:</span> Maribel Pajares
+                    </p>
+                    
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-sm-12">
+                <div class="card " id="imgBorder">
+                    <div class="card-body">
+                        <div><img src="images/maribel.jpg" class="rounded-circle mb-3 img-fluid" id="imgFooter" alt=""></div>
+                        <div id="socIcon" class="mb-3">
+                        <a href="https://www.facebook.com/maribel.pajares.7" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-google"></a>
+                        <a href="#" class="fa fa-youtube"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+  </section>
+  <!--to top-->
+  <div id="goTop">
+    <a href="#heading" id="goTopBtn"><i class="bi bi-arrow-up-square-fill"></i></a>
+  </div>
+  
+  <footer>
+    <div id="footer" class="text-center fixed-bottom text-light">    
+  <p>Copyright &copy; 2024 Maribelle Garden Set, 21 Whittlesey, Peterborough, UK PE71GS</p>
+    </div>
+</footer>
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 
+<script src="javascript/data.js"></script>
+<script src="javascript/cart.js"></script> 
+<script src="javascript/checkout.js"></script>
+ 
+
+ </body>   
+</html>
