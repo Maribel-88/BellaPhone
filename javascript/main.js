@@ -12,7 +12,7 @@ let generateShop = () => {
                         <div class="card bg-light mb-5" style="height:650px" id=product-id-${id};>
                                 <div class="card-body text-center">
                                     <p class="card-text">Apple</p>
-                                    <h3 class="card-title mb-3" id="phoneName">${name}</h3>
+                                    <h5 class="card-title mb-3" id="phoneName">${name}</h5>
                                     <a href="${pge}"><img class="img-fluid"src=${img}  alt="" id="imagePhone"><br><br></a>
                                     <p class="card-text text-center"> ${desc}</p>
                                     
